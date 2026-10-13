@@ -1,16 +1,52 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 
 <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Form</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+	<main>
+		<form id="contactForm" action="/contact" method="POST" novalidate>
+			<h1>Contact Us</h1>
 
+			<div class="field">
+				<label for="fullName">Full Name <span aria-hidden="true">*</span></label>
+				<input type="text" id="fullName" name="fullName" required aria-required="true"
+					aria-describedby="fullName-error" autocomplete="name">
+				<p class="error" id="fullName-error" role="alert"></p>
+			</div>
+
+			<div class="field">
+				<label for="email">Email Address <span aria-hidden="true">*</span></label>
+				<input type="email" id="email" name="email" required aria-required="true"
+					aria-describedby="email-error" autocomplete="email">
+				<p class="error" id="email-error" role="alert"></p>
+			</div>
+
+			<div class="field">
+				<label for="phone">Phone Number (optional)</label>
+				<input type="tel" id="phone" name="phone" aria-describedby="phone-error" autocomplete="tel">
+				<p class="error" id="phone-error" role="alert"></p>
+			</div>
+
+			<div class="field">
+				<label for="message">Message <span aria-hidden="true">*</span></label>
+				<textarea id="message" name="message" rows="6" required aria-required="true"
+					aria-describedby="message-error message-count"></textarea>
+				<p class="count" id="message-count">0 / 100 characters minimum</p>
+				<p class="error" id="message-error" role="alert"></p>
+			</div>
+
+			<button type="submit">Send Message</button>
+		</form>
+	</main>
+
+	<script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>

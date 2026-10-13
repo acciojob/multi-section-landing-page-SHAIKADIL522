@@ -1,1 +1,72 @@
 /*  your css code here. If applicable */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+  color: #1a1a1a;
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+form {
+  width: 100%;
+  max-width: 520px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+h1 { margin: 0 0 24px; font-size: 1.6rem; color: #0b2a4a; }
+
+.field { margin-bottom: 18px; }
+
+label { display: block; margin-bottom: 6px; font-weight: bold; }
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #1a1a1a;
+  background: #fff;
+  border: 2px solid #5b6770;
+  border-radius: 6px;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: 3px solid #1a5fb4;
+  outline-offset: 2px;
+}
+
+input.invalid, textarea.invalid { border-color: #b00020; }
+input.valid, textarea.valid { border-color: #1b7a3d; }
+
+.error { margin: 6px 0 0; min-height: 1.1em; font-size: 0.9rem; color: #b00020; }
+.count { margin: 4px 0 0; font-size: 0.85rem; color: #4a4a4a; }
+
+button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: #0b4f9c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover { background: #083a73; }
+
+@media (max-width: 480px) {
+  form { padding: 20px; }
+}
