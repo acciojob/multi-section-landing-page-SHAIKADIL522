@@ -1,0 +1,4 @@
+{
+  "testRepo": "multi-section-landing-page-solution",
+  "pathToFile": "cypress/integration/tests/test.spec.js"
+}
